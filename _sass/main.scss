@@ -1,0 +1,41 @@
+:root{
+    font-family:monospace;
+}
+
+body{
+    display: flex;
+    flex-flow: row;
+    margin: 0;
+}
+
+nav#navbar{
+    height: 100vh;
+    width: 15em;
+    padding: 1em;
+    box-shadow: 0 2px 5px black;
+}
+
+#page{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#page>div{
+    width: 35em;
+}
+
+@media only screen and (max-width: 768px) {
+    nav#navbar{
+        display: none;
+    }
+
+    #page>div{
+        width:100%;
+        margin:2em;
+    }
+}
+.current {
+    color: green;
+}
