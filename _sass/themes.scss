@@ -1,0 +1,38 @@
+
+$themes: (
+    light: (
+        bg: #ffffff,
+        text: #000000,
+        accent: var(--magenta)
+    ),
+    dark: (
+        bg: #000000,
+        text: #ffffff,
+        a: #ffffff,
+        h1: #ffffff,
+        accent: var(--violet)
+    )
+);
+
+$text:'text';
+$bg:'bg';
+$accent:'accent';
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+        .#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+    transition: all .2s ease;
+}
+
+@function t($key){
+    @return map-get($theme-map, $key);
+}

@@ -1,4 +1,18 @@
 ul#posts{
     list-style-type: none;
     padding: 0;
+
+    & li{
+        opacity: .5;
+        transition: all 0.2s ease;
+    }
+
+    & li:hover, li:focus-within{
+        opacity: 1;
+    }
+
+    & h1{
+        margin:0;
+    }
 }
+

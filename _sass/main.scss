@@ -1,19 +1,74 @@
+@import "themes";
+
 :root{
     font-family:monospace;
+    --b03:rgb(0,43,54);
+    --b02:rgb(7,54,66);
+    --b01:rgb(88,110,117);
+    --b00:rgb(101,123,131);
+    --b0:rgb(131,148,150);
+    --b1:rgb(147,161,161);
+    --b2:rgb(238,232,213);
+    --b3:rgb(253,246,227);
+    --yellow:rgb(181,137,0);
+    --orange:rgb(203,75,22);
+    --red:rgb(220,50,47);
+    --magenta:rgb(211,54,130);
+    --violet:rgb(108,113,196);
+    --blue:rgb(38,139,210);
+    --cyan:rgb(42,161,152);
+    --green:rgb(133,153,0);
 }
 
+
 body{
+    margin:0;
+}
+
+.base{
+    @include themed() {
+        color:t($text);
+        background-color: t($bg);
+    }
     display: flex;
     flex-flow: row;
     margin: 0;
 }
 
+a:visited{
+    @include themed(){
+        color:t($accent)
+    }
+    text-decoration: none;
+}
+
+
+img{
+    width:100%;
+}
+
 nav#navbar{
     height: 100vh;
     width: 15em;
-    padding: 1em;
-    box-shadow: 0 2px 5px black;
+    position: sticky;
+    top:0;
+    @include themed(){
+        box-shadow: 0 2px 5px t($text);
+    }
+
+    & ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    & div{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    
 }
+
 
 #page{
     width:100%;
@@ -21,6 +76,7 @@ nav#navbar{
     flex-direction: row;
     justify-content: space-around;
 }
+
 
 #page>div{
     width: 35em;
@@ -31,11 +87,19 @@ nav#navbar{
         display: none;
     }
 
-    #page>div{
-        width:100%;
-        margin:2em;
+    #page{
+        height: 100vh;
+        & div{
+            width:100%;
+            margin:2em;
+        }
     }
 }
-.current {
-    color: green;
+
+nav#navbar a.current {
+    color: var(--magenta);
+}
+
+a.current::after{
+    content: "<<";
 }
