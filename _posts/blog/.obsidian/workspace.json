@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-10-12-Second-Post.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "802d6ba3f2f8b9ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023-10-12-Second-Post.md",
+                "file": "2023-10-13-A forth blog post.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-10-12-Second-Post.md",
+                "file": "2023-10-13-A forth blog post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-10-12-Second-Post.md",
+                "file": "2023-10-13-A forth blog post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-10-12-Second-Post.md"
+                "file": "2023-10-13-A forth blog post.md"
               }
             }
           }
@@ -172,12 +160,14 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "802d6ba3f2f8b9ed",
+  "active": "ef098a9b9ff220ec",
   "lastOpenFiles": [
-    "2023-10-12-Third-Post.md",
-    "2023-10-13-A forth blog post.md",
-    "_templates/blog post.md",
     "2023-10-12-Second-Post.md",
+    "2023-10-15.md",
+    "2023-10-14.md",
+    "2023-10-13-A forth blog post.md",
+    "2023-10-12-Third-Post.md",
+    "_templates/blog post.md",
     "_templates"
   ]
 }

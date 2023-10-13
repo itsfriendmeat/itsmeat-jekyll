@@ -61,14 +61,26 @@ nav#navbar{
         padding: 0;
     }
 
+    & ul.posts>li:before {
+        padding-right: 5px;
+        content: "└";
+    }
+
     & div{
         display: flex;
         flex-direction: column;
         padding: 1em;
     }
+
+    & a.current {
+        color: var(--magenta);
+    }
+    
+    & a.current::after{
+        content: "<<";
+    }
     
 }
-
 
 #page{
     width:100%;
@@ -96,10 +108,3 @@ nav#navbar{
     }
 }
 
-nav#navbar a.current {
-    color: var(--magenta);
-}
-
-a.current::after{
-    content: "<<";
-}

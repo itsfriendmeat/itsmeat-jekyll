@@ -2,8 +2,14 @@ ul#posts{
     list-style-type: none;
     padding: 0;
 
+    @media only screen and (max-width: 768px) {
+        & li{
+            opacity: 1 !important;
+        }
+    }
+    
     & li{
-        opacity: .5;
+        // opacity: .5;
         transition: all 0.2s ease;
     }
 
@@ -13,6 +19,10 @@ ul#posts{
 
     & h1{
         margin:0;
+    }
+
+    & div#tags{
+        margin: 0 0 2em 0;
     }
 }
 

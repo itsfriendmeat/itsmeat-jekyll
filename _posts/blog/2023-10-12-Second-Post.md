@@ -7,7 +7,7 @@ header: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_
 header-alt: Perspective photo of person taking picture with a cell phone.
 tags:
   - tag
-  - tags
   - tag2
+  - tag3
 ---
 This is the second blog post.
