@@ -1,11 +1,29 @@
+{% assign post_urls = site.posts | map: "url" %}
 <nav id="navbar">
     <div>
         {% for item in site.data.navigation %}
         <ul>
             <li>
-                <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-                    {{ item.name }}
-                </a>
+                {% if item.name == 'Blog' and post_urls contains page.url%} 
+                    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+                        {{ item.name }}
+                    </a>
+                    <ul class="posts">
+                        {% for post in site.posts %}
+                        <li>
+                        <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>
+                            {{ post.title  }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    {% else %}
+                        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+                            {{ item.name }}
+                        </a>
+                
+                {% endif %}
             </li>
         </ul>
         {% endfor %}

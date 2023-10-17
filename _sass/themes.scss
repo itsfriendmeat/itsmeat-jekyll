@@ -11,6 +11,9 @@ $themes: (
         a: #ffffff,
         h1: #ffffff,
         accent: var(--violet)
+    ),
+    solarized: (
+        bg: var(b0)
     )
 );
 
@@ -30,7 +33,6 @@ $accent:'accent';
             $theme-map: null !global;
         }
     }
-    transition: all .2s ease;
 }
 
 @function t($key){
