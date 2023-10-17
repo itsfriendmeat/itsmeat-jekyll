@@ -20,12 +20,10 @@ window.onload = ()=>{
             //down
             navbar.classList.remove(scrollUp);
             navbar.classList.add(scrollDown);
-            console.log("scrolling down")
         } else if (
             currentScroll < lastScroll && navbar.classList.contains(scrollDown)) {
             navbar.classList.remove(scrollDown);
             navbar.classList.add(scrollUp);
-            console.log("scrolling up")
         }
         lastScroll = currentScroll;
     })    

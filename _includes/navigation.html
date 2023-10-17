@@ -1,8 +1,8 @@
 {% assign post_urls = site.posts | map: "url" %}
 <nav id="navbar">
     <div>
-        {% for item in site.data.navigation %}
         <ul>
+        {% for item in site.data.navigation %}
             <li>
                 {% if item.name == 'Blog' and post_urls contains page.url%} 
                     <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
@@ -25,8 +25,8 @@
                 
                 {% endif %}
             </li>
+            {% endfor %}
         </ul>
-        {% endfor %}
         <!-- <button type="button" id="theme">Toggle Theme</button>  -->
     </div>
 </nav>

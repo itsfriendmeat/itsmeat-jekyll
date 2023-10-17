@@ -101,6 +101,11 @@ nav#navbar{
         top:0;
         
         & div{
+            display: block;
+        }
+
+        & ul{
+            display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
@@ -108,7 +113,6 @@ nav#navbar{
         & ul.posts{
             display: none;
         }
-
     }
 
     nav#navbar.scroll-down{
