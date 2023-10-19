@@ -1,7 +1,10 @@
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/solid.scss";
 @import "themes";
 
+
 :root{
-    font-family:monospace;
+    font-family:Arial, Helvetica, sans-serif;
     --b03:rgb(0,43,54);
     --b02:rgb(7,54,66);
     --b01:rgb(88,110,117);
@@ -22,114 +25,72 @@
 
 body{
     margin:0;
-    display: flex;
-    flex-flow: row;
+    // display: flex;
+    // flex-flow: row;
     @include themed() {
         color:t($text);
         background-color: t($bg);
     }
 }
 
-a:visited{
+a{
     @include themed(){
-        color:t($accent)
+        color:t($accent);
+        &:visited{
+            color:t($accent2);
+        }
     }
-    text-decoration: none;
+    text-decoration: underline 1px;
 }
 
+a[href]:not(:where(
+    [href^="#"],
+    [href^="/"]:not([href^="//"])
+)){
+    &:after{
+        @extend %fa-icon;
+        @extend .fas;
+        padding-left: .3em;
+        font-size: 8pt;
+        content: fa-content($fa-var-external-link-alt);
+    }
+}
 
 img{
     width:100%;
 }
 
-nav#navbar{
-    height: 100vh;
-    width: 20em;
-    position: sticky;
-    top:0;
-    transition: opacity .2s ease;
+hr{
     @include themed(){
-        box-shadow: 0 2px 5px t($text);
+        color: t($text)
     }
-
-    & ul{
-        list-style: none;
-        padding: 0;
-    }
-
-    & ul.posts>li:before {
-        padding-right: 5px;
-        content: "└";
-    }
-
-    & div{
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    & a.current {
-        color: var(--magenta);
-    }
-    
-    & a.current::after{
-        content: "<<";
-    }   
 }
 
-#page{
+div#page{
     width:100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+ .content-wrapper{
+    flex-basis:100%;
+    display: flex;
     justify-content: space-around;
-}
+ }
 
+ .content{
+    max-width:35em;
+    margin: 0 2em;
+ }
 
-#page>div{
-    width: 35em;
-}
-
-@media only screen and (max-width: 768px) {
-    nav#navbar{
-        @include themed(){
-            background-color: t($bg);
-        }
-        height: 5em;
-        width:100%;
-        position: sticky;
-        position: -webkit-sticky;
-        top:0;
-        
-        & div{
-            display: block;
-        }
-
-        & ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        & ul.posts{
-            display: none;
-        }
+ @media only screen and (max-width: 768px) {
+    .content{
+        margin:0 2rem;
     }
+ }
 
-    nav#navbar.scroll-down{
-        opacity: 0;
-        overflow: hidden;
-    }
 
-    body{
-        display: block;
-    }
 
-    #page{
-        height: 100vh;
-        & div{
-            width:100%;
-            margin:2em;
-        }
-    }
-}
+
 

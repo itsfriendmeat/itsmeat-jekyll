@@ -10,16 +10,23 @@ $themes: (
         text: #ffffff,
         a: #ffffff,
         h1: #ffffff,
-        accent: var(--violet)
+        accent: var(--violet),
+        accent2:var(--magenta)
     ),
     solarized: (
-        bg: var(b0)
+        bg: var(--b02),
+        text: var(--b1),
+        accent: var(--cyan),
+        accent2: var(--violet),
+        codeblock: var(--b03)
     )
 );
 
 $text:'text';
 $bg:'bg';
 $accent:'accent';
+$accent2:'accent2';
+$codeblock:'codeblock';
 
 @mixin themed() {
     @each $theme, $map in $themes {

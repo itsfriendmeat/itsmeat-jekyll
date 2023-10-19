@@ -1,0 +1,53 @@
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/brands.scss";
+
+$brands:(
+    twitter:$fa-var-twitter,
+    tumblr:$fa-var-tumblr,
+    instagram:$fa-var-instagram,
+    mastodon:$fa-var-mastodon,
+    github:$fa-var-github
+);
+
+@mixin socials() {
+    @each $b, $c in $brands{
+        .#{$b}{
+            &:before{
+                @extend %fa-icon;
+                @extend .fab;
+                display: inline-block;
+                content: fa-content($c);
+            }
+        }
+    }
+}
+
+@include socials;
+
+ul#socials{
+    list-style: none;
+    padding: 0;
+}
+
+// .twitter{
+//     @extend %fa-icon;
+//     @extend .fab;
+
+//     &:before {
+//         content: fa-content($fa-var-twitter);
+//     }
+// }
+
+// .mastodon{
+//     @extend %fa-icon;
+//     @extend .fab;
+
+//     &:before {
+//         content: fa-content($fa-var-mastodon);
+//     }
+// }
+
+// .tumblr{
+//     @include socials(tumblr)
+// }
+

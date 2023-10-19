@@ -2,9 +2,9 @@
 layout: default
 ---
 <img src="{{ page.header }}" loading="lazy" id="header">
-<article>
+<article class="post">
     <h1>{{ page.title}}</h1>
-    <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+    <p class="details">{{ page.date | date_to_string }} - {{ page.author }}</p>
     {{ content }}
     <div class="tags">
         {% for tag in page.tags %}

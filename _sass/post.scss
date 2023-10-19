@@ -1,7 +1,16 @@
+@import "themes";
+
 img#header{
     margin-top:1em;
 }
 
 div.tags{
-    float: inline-end;
+    float: right;
+    margin: 1em 0 0 0;
+}
+
+.details{
+    @include themed{
+        color: t($accent)
+    }
 }

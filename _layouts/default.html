@@ -1,23 +1,28 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en" class="theme dark">
+<html lang="en" class="theme solarized">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" type="image/svg" href="/assets/favicon.svg">
     <script src="/assets/js/main.js"></script>
-    <title>{{ page.title }}</title>
+    <title>itsmeat - {{ page.title }}</title>
+
 </head>
-<body class="theme dark">
+<body>
     <!-- <div class="base"> -->
-        {% include navigation.html %}
         <div id="page">
-            <div>
-                {{ content }}
+        {% include navigation.html %}
+            <div class="content-wrapper">
+                <div class="content">
+                    {{ content }}
+                </div>
             </div>
         </div>
-    <!-- </div> -->
+        <!-- {% include footer.html %} -->
+
 </body>
 
 </html>

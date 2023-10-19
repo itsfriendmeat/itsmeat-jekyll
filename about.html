@@ -1,0 +1,18 @@
+---
+layout: default
+title: About
+---
+<h1>About</h1>
+Other places to find me:
+
+<ul id='socials'>
+    {% for item in site.data.socials %}
+        <li title="{{item.site}}" class="{{item.site | downcase}}"><a href="{{item.link}}" target="_blank">{{item.handle}}</a> </li>
+    {% endfor %}
+</ul>
+<div>
+    <p>
+        Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a><br />
+        Deployed via <a href="https://github.com/neavlingm/itsmeat-jekyll">GitHub</a>
+    </p>
+</div>
