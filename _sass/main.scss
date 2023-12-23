@@ -36,9 +36,9 @@ body{
 a{
     @include themed(){
         color:t($accent);
-        &:visited{
-            color:t($accent2);
-        }
+        // &:visited{
+        //     color:t($accent2);
+        // }
     }
     text-decoration: underline 1px;
 }
