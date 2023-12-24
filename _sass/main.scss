@@ -3,51 +3,51 @@
 @import "themes";
 
 
-:root{
-    font-family:Arial, Helvetica, sans-serif;
-    --b03:rgb(0,43,54);
-    --b02:rgb(7,54,66);
-    --b01:rgb(88,110,117);
-    --b00:rgb(101,123,131);
-    --b0:rgb(131,148,150);
-    --b1:rgb(147,161,161);
-    --b2:rgb(238,232,213);
-    --b3:rgb(253,246,227);
-    --yellow:rgb(181,137,0);
-    --orange:rgb(203,75,22);
-    --red:rgb(220,50,47);
-    --magenta:rgb(211,54,130);
-    --violet:rgb(108,113,196);
-    --blue:rgb(38,139,210);
-    --cyan:rgb(42,161,152);
-    --green:rgb(133,153,0);
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --b03: rgb(0, 43, 54);
+    --b02: rgb(7, 54, 66);
+    --b01: rgb(88, 110, 117);
+    --b00: rgb(101, 123, 131);
+    --b0: rgb(131, 148, 150);
+    --b1: rgb(147, 161, 161);
+    --b2: rgb(238, 232, 213);
+    --b3: rgb(253, 246, 227);
+    --yellow: rgb(181, 137, 0);
+    --orange: rgb(203, 75, 22);
+    --red: rgb(220, 50, 47);
+    --magenta: rgb(211, 54, 130);
+    --violet: rgb(108, 113, 196);
+    --blue: rgb(38, 139, 210);
+    --cyan: rgb(42, 161, 152);
+    --green: rgb(133, 153, 0);
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
+
     // display: flex;
     // flex-flow: row;
     @include themed() {
-        color:t($text);
+        color: t($text);
         background-color: t($bg);
     }
 }
 
-a{
-    @include themed(){
-        color:t($accent);
-        &:visited{
-            color:t($accent2);
-        }
+a {
+    @include themed() {
+        color: t($accent);
+        // &:visited{
+        //     color:t($accent2);
+        // }
     }
+
     text-decoration: underline 1px;
 }
 
-a[href]:not(:where(
-    [href^="#"],
-    [href^="/"]:not([href^="//"])
-)){
-    &:after{
+a[href]:not(:where([href^="#"],
+        [href^="/"]:not([href^="//"]))) {
+    &:after {
         @extend %fa-icon;
         @extend .fas;
         padding-left: .3em;
@@ -56,41 +56,52 @@ a[href]:not(:where(
     }
 }
 
-img{
-    width:100%;
+img {
+    width: 100%;
 }
 
-hr{
-    @include themed(){
+hr {
+    @include themed() {
         color: t($text)
     }
 }
 
-div#page{
-    width:100%;
+div#page {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
- .content-wrapper{
-    flex-basis:100%;
+.content-wrapper {
+    flex-basis: 100%;
     display: flex;
     justify-content: space-around;
- }
+}
 
- .content{
-    width:35em;
+.content {
+    width: 35em;
     margin: 0 2em;
- }
+}
 
- @media only screen and (max-width: 768px) {
-    .content{
-        margin:0 2rem;
+.excerpt {
+    padding: .5em 0;
+}
+
+.index-tags {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-content: flex-start;
+    & * {
+        color: var(--b00);
     }
- }
+}
 
 
-
-
-
+@media only screen and (max-width: 768px) {
+    .content {
+        margin: 0 2rem;
+    }
+}
