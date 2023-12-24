@@ -31,14 +31,6 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-#   - jekyll-tsc
-
-# typescript:
-#   temp_dir: .typescript
-#   extensions: ['.ts', '.tsx']
-#   copy_ext: []
-#   command: ['tsc']
-#   cache: true
 
 sass:
   sass_dir: _sass

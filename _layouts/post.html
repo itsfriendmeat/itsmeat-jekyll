@@ -8,7 +8,7 @@ layout: default
     {{ content }}
     <div class="tags">
         {% for tag in page.tags %}
-            <a href="#">#{{ tag }}</a>
+            <a href="/tag?tag={{ tag }}">#{{ tag }}</a>
         {% endfor %}
     </div>
 </article>

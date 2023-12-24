@@ -1,0 +1,11 @@
+{
+  "userIgnoreFilters": [
+    "assets/",
+    "_data/",
+    "_includes/",
+    "_layouts/",
+    "_plugins/",
+    "_sass/",
+    "_site/"
+  ]
+}

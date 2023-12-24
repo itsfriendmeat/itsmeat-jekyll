@@ -1,10 +1,10 @@
 ## Setting up dev environment
 1. Install ruby & dependencies
 ```sh
->> sudo apt-get update && sudo apt-get upgrade 
->> sudo apt-get install ruby-full
->> ruby -v
->> gem -v
+sudo apt-get update && sudo apt-get upgrade 
+sudo apt-get install ruby-full
+ruby -v
+gem -v
 ```
 
 2. Clone repo
