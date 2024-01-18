@@ -77,51 +77,55 @@ nav#navbar {
         flex-direction: column;
         padding: 1em;
     }
+}
 
 
-    @media only screen and (max-width: 768px) {
-        nav#navbar {
-            flex-direction: row;
-            align-items: center;
+@media only screen and (max-width: 768px) {
+    nav#navbar {
+        flex-direction: row;
+        align-items: center;
 
-            @include themed() {
-                background-color: t($bg);
-            }
-
-            height: 5em;
-            width:100%;
-            position: sticky;
-            position: -webkit-sticky;
-            top:0;
-
-            & div {
-                display: block;
-            }
-
-            & ul {
-                flex-basis: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
-            & ul.posts {
-                display: none;
-            }
+        @include themed() {
+            background-color: t($bg);
         }
 
-        nav#navbar.scroll-down {
-            opacity: 0;
-            overflow: hidden;
-        }
+        height: 5em;
+        width:100%;
+        position: sticky;
+        position: -webkit-sticky;
+        top:0;
 
-        div#page {
+        & div {
             display: block;
-            height: 100vh;
-            // & div{
-            //     width:100%;
-            //     // margin:2em;
-            // }
         }
+
+        & ul {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            & a.navlink {
+                width:100%;
+            }
+        }
+
+        & ul.posts {
+            display: none;
+        }
+    }
+
+    nav#navbar.scroll-down {
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    div#page {
+        display: block;
+        height: 100vh;
+        // & div{
+        //     width:100%;
+        //     // margin:2em;
+        // }
     }
 }
