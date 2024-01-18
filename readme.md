@@ -7,9 +7,9 @@ ruby -v
 gem -v
 ```
 
-2. Clone repo
+2. Clone dev branch
 ```sh
-git clone neavlingm:neavlingm/itsmeat-jekyll.git
+git clone -b dev neavlingm:neavlingm/itsmeat-jekyll.git
 cd itsmeat-jekyll
 ```
 

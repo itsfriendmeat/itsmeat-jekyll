@@ -19,4 +19,4 @@ title: My Stuff
 
 ![photo of a truck on fire](https://i.postimg.cc/vMq6mndd/IMGP2658.jpg)
 
-![blurry photo of i've made too much pasta performing at furrydelphia 2023](https://i.postimg.cc/XjH7ntz6/IMGP2695.jpg)
+![blurry photo of i've made too much pasta performing at furrydelphia 2022](https://i.postimg.cc/XjH7ntz6/IMGP2695.jpg)
