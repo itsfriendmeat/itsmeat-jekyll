@@ -1,6 +1,6 @@
 - site: Mastodon
   handle: its-meat@meow.social
-  link: https://mastodon.online/@friendmatt
+  link: https://meow.social/@its-meat
 - site: bluesky
   handle: itsmeat@itsmeat.neocities.org
   link: https://bsky.app/profile/itsmeat.neocities.org
@@ -11,5 +11,5 @@
   handle: _its_meat
   link: https://twitter.com/_its_meat
 - site: GitHub
-  handle: neavlingm
-  link: https://github.com/neavlingm
+  handle: itsfriendmeat
+  link: https://github.com/itsfriendmeat
