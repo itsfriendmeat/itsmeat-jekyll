@@ -1,15 +1,15 @@
 ## Setting up dev environment
 1. Install ruby & dependencies
 ```sh
->> sudo apt-get update && sudo apt-get upgrade 
->> sudo apt-get install ruby-full
->> ruby -v
->> gem -v
+sudo apt-get update && sudo apt-get upgrade 
+sudo apt-get install ruby-full
+ruby -v
+gem -v
 ```
 
-2. Clone repo
+2. Clone dev branch
 ```sh
-git clone neavlingm:neavlingm/itsmeat-jekyll.git
+git clone -b dev neavlingm:neavlingm/itsmeat-jekyll.git
 cd itsmeat-jekyll
 ```
 
