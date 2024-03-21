@@ -28,7 +28,7 @@ bundler install
 bundler exec jekyll serve
 ```
 
-
+6. Have Fun : )
 
 
 
